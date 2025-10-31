@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Verde - Aceite de Coco Orgánico</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9da;
+            color: #333;
+        }
+        header {
+            background-color: #1f8b43;
+            color: white;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            margin-left: 20px;
+            font-size: 1.5em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .menu-container {
+            display: flex;
+            align-items: center;
+        }
+        /* Estilos para la sección del producto */
+        #producto {
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+        }
+        .imagen-producto {
+            flex: 1;
+            padding-right: 20px;
+            min-width: 300px; /* Ancho mínimo para la imagen */
+            display: flex;          /* Añadido */
+            flex-direction: column;   /* Añadido */
+        }
+        .imagen-producto img {
+            max-width: 100%;
+            height: 200px;          /* Añadido: Altura fija para todas las imágenes */
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            object-fit: cover;      /* Añadido: Cubre el espacio sin deformar */
+        }
+        .info-producto {
+            flex: 2;
+        }
+        h1 {
+            font-size: 2em;
+            text-align: left;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .descripcion {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .detalles h2 {
+            font-size: 1.3em;
+            color: #4CAF50;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .detalles ul {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        .detalles li {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .detalles p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .precio {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #367c39;
+        }
+        /* Media query para dispositivos móviles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Apila los elementos verticalmente */
+                padding: 15px;
+            }
+            .imagen-producto {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 20px;
+                min-width: auto; /* Elimina el ancho mínimo en móviles */
+            }
+            .info-producto {
+                width: 100%;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .descripcion,
+            .detalles p,
+            .detalles li {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Vida Verde🌱
+        </div>
+        <nav>
+            <ul class="menu-container">
+                <li><a href="VIDAVERDE.html">Atrás</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="producto">
+        <div class="container">
+            <div class="imagen-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVzOMD0lafsJPtQI0IjC0WPzYC5sOfkD1HPA&s" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpY4Q3T8D3wnSD85eDGlXtFpqY95DzFzaEDw&s" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfaq2gniQ7zNhk3JBQGChmnKTZUJnQvqY75A&s" alt="">
+            </div>
+            <div class="info-producto">
+                <h1>HARINA DE LINZA - Vida Verde</h1>
+                <p class="descripcion">Semilla rica en omega-3, fibra y antioxidantes.</p>
+                <div class="detalles">
+                    <h2>Beneficios:</h2>
+                    <ul>
+                        <li>Apoya la salud del corazón</li>
+                        <li>Ayuda a reducir la inflamación</li>
+                        <li>Mejora la digestión</li>
+                        <li>Puede ayudar a reducir el riesgo de ciertas enfermedades</li>
+                    </ul>
+                    <h2>Ingredientes:</h2>
+                    <p>Fibra, proteínas, hierro, magnesio</p>
+                    <h2>Modo de Consumo:</h2>
+                    <p>Semillas molidas en smoothies o yogur, aceite de linaza como suplemento, semillas enteras en ensaladas o como topping.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

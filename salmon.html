@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vida Verde-salmón</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+     /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9da;
+            color: #333;
+        }
+        header {
+            background-color: #1f8b43;
+            color: white;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            margin-left: 20px;
+            font-size: 1.5em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .menu-container {
+            display: flex;
+            align-items: center;
+        }
+        /* Estilos para la sección del producto */
+        #producto {
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+        }
+        .imagen-producto {
+            flex: 1;
+            padding-right: 20px;
+            min-width: 300px; /* Ancho mínimo para la imagen */
+            display: flex;          /* Añadido */
+            flex-direction: column;   /* Añadido */
+        }
+        .imagen-producto img {
+            max-width: 100%;
+            height: 200px;          /* Añadido: Altura fija para todas las imágenes */
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            object-fit: cover;      /* Añadido: Cubre el espacio sin deformar */
+        }
+        .info-producto {
+            flex: 2;
+        }
+        h1 {
+            font-size: 2em;
+            text-align: left;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .descripcion {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .detalles h2 {
+            font-size: 1.3em;
+            color: #4CAF50;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .detalles ul {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        .detalles li {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .detalles p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .precio {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #367c39;
+        }
+        /* Media query para dispositivos móviles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Apila los elementos verticalmente */
+                padding: 15px;
+            }
+            .imagen-producto {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 20px;
+                min-width: auto; /* Elimina el ancho mínimo en móviles */
+            }
+            .info-producto {
+                width: 100%;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .descripcion,
+            .detalles p,
+            .detalles li {
+                font-size: 0.9em;
+            }
+        }
+</style>
+</head>
+<body>
+<header>
+        <div class="logo">
+            Vida Verde🌱
+        </div>
+        <nav>
+            <ul class="menu-container">
+                <li><a href="VIDAVERDE.html">Atrás</a></li>
+            </ul>
+        </nav>
+      </header>
+  <section id="producto">
+    <div class="container">
+      <div class="imagen-producto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTThIEIVQMha4ymKv9vIHP_OiIbdylXGpEOwg&s" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn148pr-hqVOQrkt7wlULKjimNPl4Jya49fPT75W0twkVrttGWejEbPgJG-mgLPQPI8eU&usqp=CAU" alt="">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTExMWFRUXGRcXGRgYGBkVGxgYGhgYGBYWGxcYHSgiGBslHRUXIjEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGxAQGy0mICUtLTYtLS0tLS0tLSstLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABQYDBAIHCAH/xABFEAABAwEGAwQHBQUGBgMAAAABAAIRAwQFEiExQVFhcQYigZEHEzKhscHwQlJigtEUI3Ki4TNzkrLC8SRTVGOT4iWjs//EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EAB0RAQEAAgMBAQEAAAAAAAAAAAABAhEDITESQWH/2gAMAwEAAhEDEQA/AO8UREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBEUPffaey2SfW1QHfcb3ncpA9kc3QOaCYRdR316Ysy2zUx1I9YfJpDWn8zlTrw9IFura1iOQc4fy0cI85ROnoqrWa0S5waOJIHxWmb7sv/AFFH/wAjP1Xmx15VXHETmd8FNpPi6XFb9C9K3363hVIH8rENPQjL6sx0tFE9KjD81t0q7XZtcHDkQfgugKN7vEFzqp61x/rpLdsl5jUAzyp2eofOkWOQ072RdUWHtPUbk2sJ2aXup+bbSCD0a8Kw2HtthIbXABOmJpokjiCSWOHR2fBDS7ItOxXnSqjuuz4HI8sitxECIiAiIgIiICIiAiIgIiICIiAiIgLRve9qNlpmpWeGN2nVx+61ozceQUT2z7X0bvpy6HVSJayYy0xOP2Wz4nQbx5+7RdobRbquOq5zpya0ZZE5AD7DeWp3kolc+13pYrVi6nZQaTNMQMOPWoPY6Nz/ABbKgU6Ne0uya6qSZyBwgneN+pVk7Pdjw6H2kkN2Y3I+J2+PRXez0WUgG0wKbRsIE8ydZ8Vhnz44+N8ODK+9KVd3Yd7o9c7D+FomPLuj3qw2bshQbkGzwLs/5fZVjpVwB+ma2GV2GIIWN59/recGvxDULlawQ1o8gPgFgq3YHa4o0MahWgNB5eK41rMDm3VUyu/F8evXXtruqp7LC4nhHzBUbZbK8u9W6SZMB3ez4d5dsWam3TCPL4qPvu52u74HeGkZaZ58Tr5jgplsm5S6t1YoNSw2lgJDZbu3MxywmW8dtlysr6rB3cgcy1pBb+ak6WO8mq1tsJe3Imct/rYKLvSyFjHOA7zSIjLFO3LJXx5clMuLHxrWe9n082nAR90ONPPUuok4qc/fpmOSulwdtvZbWgYsmuxBzHcm1BlP4DDhkIcSqi+yipTZlhLhMbg+GhyKiXU303EHKcjlLXjg9mjuozG2a3x5Zeqwy4rPHftmtLXiWmVmXS/ZztG+zmAXFjRJZOJzWjIupuOdVg3ae80DcTPalxX3StVMPpuBnh9cj5HgQNWGkoiIiBERAREQEREBERAREQFXO23aund9HEYNVwOBp0y1e6Psj3mBzEtfN507NRfWqHutGm7jo1o5kwPFebu0191bbXdVf3i4wxokjLJoA+63biZOpRLVvK2VrXXL3l1So8yAczP3jtMaDQAK03FclOzt9ZUzfxPHcD9VLdnuxZpUMTnEV3gyRHdykMnrrELds9x5A2gwGtgMaZg8SY+oXJzct8jt4OKe1xusftJIa4saNYGZ6HQKYo3DQA7wLzxcf0gJZHsDgyi2TliwxkDuSfgM1Its7Sc8+Rhcsm3Vbp9FCnIljcuIB5a9MlHX3YMhUpAkzBaAIP4uR5qTfZGkZZcxksNKq6mYeZGzv19/uU5TrVVxuruIOxXiQcJnxEGRqOvEKes9cO0+v1WtelzCrL2vIdrlEEgAA88vPJRNhtJY7C7X48COULK7wv8AG2sc516s5Gc8fistZ4Ak6AHPkBPy24LBQqBwniPevlZoq0XNxYcTYnhkt5l05rj32jbLJOLAWtLsgYnlpyXK9aBLcnEb9N4lfbNaAaDCHDJ5HiAf9+ikrPTx6xOvgBxVcLfF89TtVWtzGIEkRJ0B6cFjvmjLQ9oxeGc5Tp11Ujf9lJEx7MHpnGviVCWl9QAgGfP4q8qmv1HWu7w8S3Jwz4GRoQdnaZqPue+qtiq42Z5/vKegeN3NG1QRmN4BGYBUm1pDsWef2ZnxmVjve7BVEt9oZ8zHDnwK6OPl11WHJxb7juLs5flK10W1KbgQR9A8/rIyBLLzr2S7RvsFoxE/u3ECq3QCTAqAbZ68DyML0FYbW2qxr2kEEAyPr602XS5K2EREQIiICIiAiIgIiie1N6GzWZ9RsY8mU5/5jzhaTyBOI8mlB1Z6Xu0frqv7Mx37ukXBxG7xlUd+XNg5l/JRno3uNtV5tNQQ1mTG8Of1vPAKtWt3rHnU4tJ1wNPdnm4y4rtLsxQZSsrGDhLv4jn4rHmz+Zpvw4bu01aK+XAKGNrDqzaZkzJOukcltXhagGlatyUGkGsAC50weDRsPeV5+fdejhJIlqLWsJwtDRyAAOSzPqnUCTtOhXxlMRmvr3QATkNufRXk0pbtxDah68I92S5B4cC1wgxkD74KU6s93Mec/Fc6ubSZz4qyrDZ6paSwnWcJPDh4KE7Q2A04qA5N1nLKRPUZzxCnAwktLm4TryzBGUcea1b9sbq1BzRGIAxnvsPGFW47mqvjlq7jBdlqAacXCcuHEHfkVsWJgq0ntBInnCrlix06WCoYcCQBwBzI8zPirLcDIZMe0DCxw9+WvJNS5I9ljFGm392GAQAZklwgSSNjBUxYXme6dQoq8Kb2sqSIa57C3cakkjhp71u3XU9nyV5dZK5TeLnelPEwjf6hV+20ssUHST4bq2WqnIUPVp5eJzWtnbGXpU69UAydz9Ssde0eqYXQSG5wNgOE8lnvmzYc4+pWq1wILY1HXqm06Q/aCztqNFelBB1HXj10POFbvQ92ohxsdR0iMVIn7u7eo06j8So9G0ijVqUj/Zu2KjjWdZq7ajDmx2NpG8e0PEZ+C7OLLc1XFy46u3qpFF9mr0babPTqtiHNBy24jwII8FKLVgIiICIiAiIgLrD0v3kS5lnadGz+eriYD4U21v8AGF2evP8A6QLyNS2VnA/aqAeYszfdTc78yJiLummC41NtG9NG+QAPiuxbI/C0AZgBUS72NDQ06ET8v0VkoWx7WBo7xzDIkztHXSVwc1+q9HhnzNNm8mVKx9VTiSMydGjdWK7qIaMIEBsAcDkte77EKNItBlxkkjc9Vs3daA9uINgTAnXLXXxWMnba3pt4ZK5VY09yxkgQd9Pj+pXxzWuaWnMHeJ3BBy5rWeMb65kRnouLqgOUgyvkRpnz5IQDyPEahCMziXNwn+q1CXNdExz08+CyguBgmeB+S1b1tLaYDnGJyVM71tfCd6fbXVogzUAPPIx4rQo9paLXCmMRJmJAHE67rHaLA19F1aoTk1zgOGRjIalbN22E4WThcWgGIEDKCQdZzOfNUlyaWY6YrPf1CsXUnOgtJGejuYJ2W5Z61NoJFRpjbL9Vq2i7mNnCxocd4GvFYrru2kCQWiTmSRr481H1U/M9Sjr7pDuHET+EFx4yQ0aRuVwqNBzGhGeUfFYn2YB0NyGWW2XwW0+nhCvjbfWeUxniCvOzhzSPJVppw5H2mnfcK61GkgkgGFB2+xNInCMWyur46+7Y0sw5muszryVfsVtc9rgfaZDxzGjh7x5rse33RTqMh8nlJG0bKhWm6qtkqZEmm52E8x9nF4n3Lp4so5ubGu2vQXfWVWyk+ycbP4TH/qPArt1eZ/RxeBs94Uc4BcaR/wBM/wCL3L0u0zmuhy19RERAiIgIiIOFaoGtLjoASegErzVby51QYvaJpT1FLG7+Zy9E3+Ystc/9qr/kcvPlqZ/xB5Vag8hTb80viY2BMnbDkN+Clbpe7Itmd+ujYEaqGgkuAn2vkFdLksuBgmI+t1wZ16OCTs9oqFgBAnhn+i2KD36Fuq4Wak4Hvaaxof8AFuNcoW2Bkse2t04stIGoI67+K5MI2OXy2TENJmeUri5o1hWlVsZQ9BWWNrdRrvoSfjmuQoN+v6qe0dMrhqND5hRN8EPNFpaCS8TrGQJJy0ghS7WhaV42IktIMYXB3Hrooy2nGyVwe8uqCnALYJdzyiOWsrdoO4bZLC2jhJJ3iCsdF+buv6JOvS9zplrU5Ov+yx0qcEny22C+PtADocYOUSPcudSvOmyj5mz6umSnrO5SvU2+ui1XEzM5nKFzx58leddK2b7cXNkKPtkeS3Xv12K0rZ9eSCFtGWQzlVu/7C5zZmWkjzU/aahGYCgr4tBFMk5DNXxRkqtOqadcOGrXsd45tK9WXZWx0qbuLQfcvJNWrLg7iJ8qgK9S9jKmKw2cnX1bfgu6ePPqaRERUREQEREGhf4/4W0f3VX/ACOXQVuZFZx/7tY//k5eiLTSD2OYdHNLfMQvP140zIcRB/dE9X2eHfz0iEviY2ey9RwtLmkAtMhw5EGIPFXakBpAjhsqVc5ArB8xln1GQ+Kt9mdwXn5V6WMSTZ81zqRhz6fQ3WGm4kZaj4LO6HDXLXx4qlTHxgXKrllv7lwzAE58wFkqNySTot7Y7O8g5xh8deQ3WVhy8Vha2J+SEu4FRvSdbbI0XEDJcaPGc+Gy+1nQFO/01+IF15up1HU3O7p7zZ24wfFcjbgHTqDr8lA9uqn7sRqDr9bfoFT7vvqswhubuA1nipmNymy5SXTthlUOzmY0nbovtN89NjxVFoX2NHsdTP4gQFO0b4nIQctimqdJvFPgvrXZnwUOL2aBmDK4U72AMkGDpCjVT0nHaea0rRUBGeX1qo6032GOxN7zdCJgg8QI0Ubb75YT3HgSMwfsncK/yptsWoif0UPelnxtcJ1EQo22215zD2keC06t8YWGTBj6iVeSqXKK/XZhwt4NI/nAXqTsKP8A4+zf3YXmCpBewbkMnkXOmPIL1V2ZoYLJZ28KTP8AKCuyeOHL1JoiKVRERAREQF0x2usXq6tVoHsmpA/gqC1N/wDqrPH5V3OqH2+seGoKkSHND44mlPrG/mo1H/8AiRMUvsyymMUu7zTAYYhwABmfrRTj6haZ+ydOXIqt2Kz+rrYTnhlk8QIwnoWEGfxKys0z0OoXBzSzJ6PDZcW9Td7JBW4OLd9lDNBYZElvLMjqpKz1oyOW+fNZRpY3A7w5L65uWsfXuXyR1XEDgSrqOLidwJ5L6Y3yWNzyDDhGuesx008VyY7n9eKqsyNcNljqulc5XI0gcwYUXvpM67UvtmwktYPtg5c/oqSuS5aNKmAwhzspJyJJ3We/LICDUIOJo7seem+ijrqtgeAcwfZcPnyUZWyaWxkt2nH3ZTc0hwxA6g5jyUBbLkpU5Ipxt3ZHKctDzVis9oxZEcUNEjE0mQdPn8lbG9dKWd9qJaLJU1ZVI5PAd/NlC40G2nPF6lx03HiefJXc2ZjiAQDv5aLVtN2tedIMajKeqvMlbFXsVGtJFUU+UTJy4rFa7O1uMtZ3olxInxhWGtc0ZhzoGflwyWCrZsBxiTORnhOegyU7V067tFnNQkhpcchMZDoNFpXrdJa1vezBGWog6xPOF2TbqVMMlgaPrNUi/bYYMj2Zd8mjxPwWuFtrPOTVtR9wWQ17bTpjPFVDR0EN+JK9Y02BoAGgAHkvPvoNuY1Lb60jKi0u/NoP5nHyXoRdTjoiIiBERAREQFF9pLEatA4RL2EVGDiW6s6OaXN/MpREHS16WbDhezMCGzxaQXUHHmWYmEbGm0Ldum2sqCC4AjLPfQZH61CsHaS6wx7mkH1bw5wjUNJxVWj8THRVb+bgqfZrK1tY06oEydNCYBBbyLTiH4T+FYc+G5uOrgz1dVYTQEe1B12819yIGITzBjL5rWdYMOdN3OCcui50qbxh0Ayn5wuLTs3/AFIUcIyxOEZarZaNTM7j5dVGOLgdoyz3WZjzxHnrz5Kdo03G1XAaH4/BPWgnTlpn00WNjydB5mPeAVyaKpJgsaIykFxnjt5Qo2mSOVNonQx4/ErEajsQDYjczPkd+qxVaDQZq1s9YLg0TybktltRo9nPpn71n6v4zMYN8+qpt9WKrTf6ymwerbk6CPEneZyjNW0lx8fctG+KeKk5jgSHd3WIORBkeCvv8qs6u40rrqNLC/jl5nRTNTVVTs8HU3Gk+YyI3BHVWx+anCHLe2ACDKUxIy3PuXImTnzWMAyY4/DVXkZ2ueEA5cFpWpo0I1Ww+qIJ4aqEv28Q0HMK8Zq7e9YMLhOWaol51y4hu5IcemjG/NSV8W7ESZOBuZz14N6lbvo47NOt9saHA4GnHVPADUA+TR15Lfix12x5s99O5PRDcH7LYWvcO/Wh5/h+x5yXfmV5XFjAAABAGQA2A0C5LdzCIiAiIgIiICIiDUvSwitTLZhw7zHfdePZd+o3BIXWl93cdMJbUYcIA1n2vVAnUgy+mTqCW8QO1lD3/c4rNxNALwIIJgPbM4SdiDm12x5SETK6zsN8/f1jONHcHCdj7jI6zFntgqNJHXx+ajr5ugulzZxy6Rhhzj9ohv8AzIjHT+0Ic3OJ17ntTPYya8AECZDhoXNd9pvLUb8+Tl4vnuO3i5Zer6mgCQABmc+X9FiNUt2OXKVmL++InLce/wCC2aIxDPIkdc1hrbb60w2a3iQIPhPxUmKmeQ8+PCPmoy1uDSM8zsvhvAtB7pMDXb3Kt69Wk343bZRa4hzwJGmRPw1Wp+2j7LXADi0j3LGLRVdBxCfwj9SVlNT7xE+SpvtfWpqsRvECBuTABEea2A4FhBM7578ZWK00GlpmFH+ryzJP6cFbHe0Za101L2vBlKIPekRx6KVsV4BzZnQBULtBiIBnQADlxW1cF6gtIJ1EFazDU6ZXPfq7MtrXtJHTxySz1TB8Y8VSrNfobLQcp149FOUbzaG67J2i6c7zvCGEaET5jiqDe95OccIOZknktvtDfOJzmszO/BvU8VU6tQuOFuc/zcuTVtx8e/WPJySdR9p0n16jKVMFxJho3c45Yo8YAXpb0fdlW3fZQyB618OqHns2eAnzJO6rfoo7AfsrRarQ39+4SxpH9mCNSNnEbbDmcuzF1OS0RERAiIgIiICIiAiIgIiIIm+bmbWBcID99g6NJjQjZwzHQkHru/7lzM914Mye5LtnFw/s6h2qjuv+1BmO2lrW6wMqiHjodx48OWh3RMrpqlejqZwV8QLftgFrh/eMbpP3hLSpez2skCHYm7EGZHXdSfaLsi9oloxsExEgt44SJdT6d5hzkNVHrWerRIwE8QAGhxG5wDu1OrCegWOfDL46MOaz3tcgwP1/Xz81jqOLTllpsYI8N1W7B2ggkOEniDBHVpzCmqV70n90ugkDlr1+K5cuLKex1Y8uN8rFeDqzowjBxM59MtQsffIGI4o5mfcpR1MARiMdcv8Adapc1s6ZeCyuF/Ws5Jrp9bJgmeQmPNZagMStR9qjfy/osf7ZiGpA5gLTGM8qrt+CcXmqa+uWEwYkR1Vj7V3iCYZmdDCqTmGe84N958gujDHbmzy02KVtgF2p+C4tt9T2i4tGknMxwAWq2B7Lc+Lsz4NCs/ZXsLbLe4Oa0tp71H5CNwDv0bPgtJxz9Z5ct/FdoUalZwp0mucSQMIkkk8Y1J4LvP0cejRllw2i1APr5FrdQzgTxcNth10snZDsVZbvaPVtxVIg1CM+eEfZHvO5Ksy1Y2iIiIEREBERAREQEREBERAREQEREBRd69n6FoBD2AE6kAZniQQQ48yCpREHW19ejp5zpuD40DtRwjEZ/nA5Kj3v2TtNOcVOo2N/aH+J0DycV6BRE7eZXm1U/Ze7yePeJCw1b7tQEF/m7z1C9K2m66FT+0o03/xMafiFoVOydhOtnZ4Aj4FRqJ+q84Pv2uRGIef9FgqXhaX6vcR+c/0XpIdjLB/0zPHEfiVtWfs5Y2Zts1EHj6tpPmQnzD6rzJY7otVcxTp1X/wg/BklW64/RJbqsGoG0G8XHveQk+cLv9jABAAA4DJclKNqN2c9F1hs0Oe0138XiGz/AAb/AJiVd2MAAAAAGQAyAHABckRAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIP//Z" alt="">
+    </div>
+      <div class="info-producto">
+        <h1>SALMÓN ENLATADO - Vida Verde</h1>
+        <p class="descripcion">- Salmón preservado en aceite o agua, rico en nutrientes.
+ </p>
+        <div class="detalles">
+          <h2>Beneficios:</h2>
+          <ul>
+            <li>Alto contenido de omega-3</li>
+            <li>Apoya la salud cardiovascular</li>
+            <li>Rico en proteínas y vitamina D</li>
+            <li>Puede ayudar a reducir la inflamación</li>
+          </ul>
+
+          <h2>Ingredientes:</h2>
+          <p>- Salmón
+- Agua o aceite
+- Sal (a veces)
+</p>
+
+          <h2>Modo de Consumo:</h2>
+          <p>- Agregar a ensaladas
+- Mezclar con mayonesa para sándwiches
+- Usar en pasta o arroz
+- Como ingrediente en sopas y guisos</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

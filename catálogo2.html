@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Verde - Encabezado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+   /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9da;
+            color: #333;
+        }
+        header.menú {
+            background-color: #1f8b43;
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* ¡Añade estas líneas! */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+        }
+        .logo {
+            margin-left: 20px;
+            font-size: 1.5em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .menu-container {
+            display: flex;
+            align-items: center;
+        }
+ /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Encabezado */
+        .encabezado {
+            background-image: url('https://pureecoindia.in/wp-content/uploads/2019/03/main-pic-min.jpg'); /* Reemplaza con la URL de tu imagen de alta resolución */
+            background-size: cover;
+            background-position: center;
+            height: 600px; /* Ajusta la altura según tus preferencias */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Capa transparente negra */
+        .encabezado::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de transparencia */
+            z-index: 1; /* Asegura que esté detrás del contenido */
+        }
+        .encabezado > * {
+            z-index: 2; /* Asegura que el contenido esté por encima de la capa transparente */
+        }
+        .encabezado h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .encabezado p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .encabezado .boton {
+            background-color: #4caf50; /* Verde */
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: 500;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .encabezado .boton:hover {
+            background-color: #388e3c; /* Verde más oscuro */
+        }
+        .encabezado .flecha {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+            color: white;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+        /* Media queries para responsividad */
+        @media (max-width: 768px) {
+            .encabezado {
+                height: 500px;
+            }
+            .encabezado h1 {
+                font-size: 3em;
+            }
+            .encabezado p {
+                font-size: 1.1em;
+            }
+            .encabezado .boton {
+                font-size: 1.1em;
+            }
+            .encabezado .flecha {
+                font-size: 1.5em;
+            }
+        }
+        @media (max-width: 576px) {
+            .encabezado {
+                height: 400px;
+            }
+            .encabezado h1 {
+                font-size: 2.5em;
+            }
+            .encabezado p {
+                font-size: 1em;
+            }
+            .encabezado .boton {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+
+/* Carrito de compras */
+#cart {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Apila los productos y el carrito */
+        align-items: center; /* Centra los elementos */
+    }
+
+    #cart {
+        width: 80%; /* Ocupa el 80% del ancho */
+    }
+}
+
+@media (max-width: 576px) {
+    .product {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    #cart {
+        width: 90%; /* Ocupa el 90% del ancho */
+    }
+}
+
+
+   /* CARRITO DE COMPRAS */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #558B2F;
+    padding: 20px 0;
+    background-color: #a4f3a1;
+}
+
+/* Estilos para la lista de productos */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #A5D6A7;
+    padding: 15px;
+    margin: 10px;
+    width: calc(50% - 20px); /* Dos productos por fila en pantallas medianas */
+    max-width: 300px; /* Ancho máximo para evitar que se estiren demasiado */
+    text-align: center;
+    background-color: #FAEBD7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product h3 {
+    color: #388E3C;
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: #666;
+}
+
+.product button {
+    background-color: #81C784;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #4CAF50;
+}
+
+/* Estilos para el carrito de compras */
+.cart {
+    border: 1px solid #A5D6A7;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%; /* Ocupa el 90% del ancho en pantallas pequeñas */
+    max-width: 500px; /* Ancho máximo en pantallas más grandes */
+    background-color: #F1F8E9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.cart h2 {
+    color: #558B2F;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 8px 0;
+    border-bottom: 1px solid #A5D6A7;
+}
+
+#cart-items li:last-child {
+    border-bottom: none;
+}
+
+.cart p {
+    text-align: right;
+    font-weight: bold;
+    color: #388E3C;
+    margin-top: 15px;
+}
+
+/* Media queries para hacerlo responsivo */
+
+/* Para pantallas más pequeñas (móviles) */
+@media (max-width: 600px) {
+    .product {
+        width: 100%; /* Un producto por fila */
+        margin: 10px 0; /* Ajusta los márgenes */
+    }
+
+    .cart {
+        width: 95%; /* Ocupa más ancho en pantallas pequeñas */
+        margin: 10px auto; /* Ajusta los márgenes */
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 992px) {
+    .product {
+        width: calc(50% - 20px); /* Dos productos por fila */
+    }
+}
+
+/* Para pantallas grandes (desktops) */
+@media (min-width: 993px) {
+    .product {
+        width: calc(33.33% - 20px); /* Tres productos por fila */
+    }
+
+    .cart {
+        max-width: 500px; /* Limita el ancho en pantallas grandes */
+    }
+}
+    </style>
+</head>
+<body>
+       <header class="menú">
+        <div class="logo">
+            Vida Verde🌱
+        </div>
+        <nav>
+            <ul class="menu-container">
+                <li><a href="VIDAVERDE.html">Atrás</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <header class="encabezado">
+        <h1>PRODUCTOS EN DESCUENTO AQUÍ</h1>
+        <p> Vida Verde tu mejor opción</p>
+       
+        <div class="flecha">
+            <i class="fas fa-arrow-down"></i>
+        </div>
+    </header>
+      
+    <div id="product-list">
+        <!-- Aquí se agregarán los productos -->
+    </div>
+
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items">
+            <!-- Aquí se agregarán los items del carrito -->
+        </ul>
+        <p>Total: bs<span id="cart-total">0.00</span></p>
+    </div>
+    <header>
+        <img src="" alt="">
+    </header>
+  </div>
+
+<script>
+   // Datos de los productos y imagen (CARRITO D COMPRAS .-.)
+        const products = [
+    { id: 1, name: "Pomada", price: 50, image: "https://naturalfarma.bo/wp-content/uploads/2025/06/Pomada-natural-de-Ortiga-1024x1024.png"},
+    { id: 2, name: "Vinagre de sidra", price: 100, image: "https://naturalfarma.bo/wp-content/uploads/2024/09/Vinagre-de-Sidra-de-Manzana-1024x1024.png"},
+    { id: 3, name: "Capsulas de valeriana", price: 50, image:"https://naturalfarma.bo/wp-content/uploads/2025/06/Capsulas-de-Valeriana-1024x1024.png"},
+    { id: 4, name: "Dulces de miel", price: 100, image: "https://naturalfarma.bo/wp-content/uploads/2025/06/Chupetes-de-miel-propoleo-y-echinacea-1024x1024.png" },
+    { id: 5, name: "Maca amarilla", price: 70, image:"https://naturalfarma.bo/wp-content/uploads/2021/11/Maca-Amarilla-1024x1024.png"},
+    { id: 6, name: "Té matcha", price: 80, image: "https://naturalfarma.bo/wp-content/uploads/2025/06/Te-Verde-Matcha-1024x1024.png"},
+    { id: 7, name: "Lavado digestivo", price: 50, image:"https://naturalfarma.bo/wp-content/uploads/2025/06/Lavado-Digestivo-1024x1024.png"},
+    { id: 8, name: "Vinagre de peregil", price: 55, image:"https://naturalfarma.bo/wp-content/uploads/2024/08/Vinagre-de-Perejil-1024x1024.png"},
+    { id: 9, name: "Aceite de copaibo", price: 40, image: "https://naturalfarma.bo/wp-content/uploads/2021/06/ACEITE-DE-COPAIBO-600x600-Photoroom.png"},
+    { id: 10, name: "Jarabe polibida", price: 30, image:"https://naturalfarma.bo/wp-content/uploads/2025/09/POLIVIDA-JARABE.png"},
+    {id: 11, name: "Matcha ceremonial", price: 25, image:"https://naturalfarma.bo/wp-content/uploads/2025/08/matcha-ceremonial.png"},
+    { id: 12, name: "Camu camu ", price: 25, image:"https://naturalfarma.bo/wp-content/uploads/2025/09/Camu-Camu-1024x1024.png"},
+];
+
+         // Carrito de compras
+        let cart = [];
+        // Función para agregar un producto al carrito
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                cart.push(product);
+                updateCart();
+            }
+        }
+        // Función para actualizar el carrito en la interfaz
+        function updateCart() {
+            const cartItemsList = document.getElementById("cart-items");
+            const cartTotalSpan = document.getElementById("cart-total");
+            // Limpiar la lista del carrito
+            cartItemsList.innerHTML = "";
+
+
+            //agregar cada item del carrito a la lista
+            let total = 0;
+            cart.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.textContent = item.name + " - $" + item.price.toFixed(2);
+                cartItemsList.appendChild(listItem);
+                total += item.price;
+            });
+            // Actualizar el total
+            cartTotalSpan.textContent = total.toFixed(2);
+        }
+        // Función para mostrar los productos en el catálogo
+        function displayProducts() {
+            const productListDiv = document.getElementById("product-list");
+
+            products.forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.classList.add("product");
+
+                // Crear elemento img para la imagen
+                const productImage = document.createElement("img");
+                productImage.src = product.image;
+                productImage.alt = product.name; // Alt text para accesibilidad
+                productImage.style.width = "150px"; // Ajusta el tamaño de la imagen
+                productImage.style.height = "150px";
+        
+
+                const productName = document.createElement("h3");
+                productName.textContent = product.name;
+
+                const productPrice = document.createElement("p");
+                productPrice.textContent = "bs" + product.price.toFixed(2);
+
+                const addButton = document.createElement("button");
+                addButton.textContent = "Agregar al carrito";
+                addButton.addEventListener("click", () => addToCart(product.id));
+
+                productDiv.appendChild(productImage); // Agregar la imagen al productDiv
+                productDiv.appendChild(productName);
+                productDiv.appendChild(productPrice);
+                productDiv.appendChild(addButton);
+
+                productListDiv.appendChild(productDiv);
+            });
+        }
+        // Cargar los productos al cargar la página
+        window.onload = displayProducts;
+        // Función para eliminar un producto del carrito
+function removeFromCart(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    updateCart();
+}
+// Función para actualizar el carrito en la interfaz
+function updateCart() {
+    const cartItemsList = document.getElementById("cart-items");
+    const cartTotalSpan = document.getElementById("cart-total");
+    // Limpiar la lista del carrito
+    cartItemsList.innerHTML = "";
+
+    // Agregar cada item del carrito a la lista
+    let total = 0;
+cart.forEach(item => {
+    const listItem = document.createElement("li");
+    const precioEnBolivianos = parseFloat(item.price); // Asegurar que sea un número
+
+    listItem.innerHTML = item.name + " - Bs" + precioEnBolivianos.toFixed(2) +
+        '<button onclick="removeFromCart(' + item.id + ')">Eliminar</button>';
+
+    cartItemsList.appendChild(listItem);
+    total += precioEnBolivianos;
+});
+
+// Actualizar el total
+cartTotalSpan.textContent = "" + total.toFixed(2);
+}
+</script>
+</body>
+</html>

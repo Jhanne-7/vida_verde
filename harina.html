@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vida Verde - Aceite de Coco Orgánico</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9da;
+            color: #333;
+        }
+       header {
+            background-color: #1f8b43;
+            color: white;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+             display: flex;
+       }
+
+        .logo {
+            margin-left: 20px;
+            font-size: 1.5em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .menu-container {
+            display: flex;
+            align-items: center;
+        }
+        /* Estilos para la sección del producto */
+        #producto {
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+        }
+        .imagen-producto {
+            flex: 1;
+            padding-right: 20px;
+            min-width: 300px; /* Ancho mínimo para la imagen */
+            display: flex;          /* Añadido */
+            flex-direction: column;   /* Añadido */
+        }
+        .imagen-producto img {
+            max-width: 100%;
+            height: 200px;          /* Añadido: Altura fija para todas las imágenes */
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            object-fit: cover;      /* Añadido: Cubre el espacio sin deformar */
+        }
+        .info-producto {
+            flex: 2;
+        }
+        h1 {
+            font-size: 2em;
+            text-align: left;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .descripcion {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .detalles h2 {
+            font-size: 1.3em;
+            color: #4CAF50;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .detalles ul {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        .detalles li {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .detalles p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .precio {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #367c39;
+        }
+        /* Media query para dispositivos móviles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Apila los elementos verticalmente */
+                padding: 15px;
+            }
+            .imagen-producto {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 20px;
+                min-width: auto; /* Elimina el ancho mínimo en móviles */
+            }
+            .info-producto {
+                width: 100%;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .descripcion,
+            .detalles p,
+            .detalles li {
+                font-size: 0.9em;
+            }
+        }
+</style>
+</head>
+<body>
+<header>
+        <div class="logo">
+            Vida Verde🌱
+        </div>
+        <nav>
+            <ul class="menu-container">
+                <li><a href="VIDAVERDE.html">Atrás</a></li>
+            </ul>
+        </nav>
+      </header>
+  <section id="producto">
+    <div class="container">
+      <div class="imagen-producto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfBIJrC9zC67gItU3SD11TCvYNdU6ltIf4qA&s" alt="">
+        <img src="data:image/jpeg;base64,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" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSurJc8y-Z-7vYyLJP0B1Mk2--D9JvAvOX5Og&s" alt="">
+        
+      </div>
+      <div class="info-producto">
+        <h1>Harina de almendra - Vida Verde</h1>
+        <p class="descripcion">Harina fina y nutritiva obtenida de almendras molidas, sin gluten.</p>
+
+        <div class="detalles">
+          <h2>Beneficios:</h2>
+          <ul>
+            <li>Rica en proteínas y grasas saludables</li>
+            <li>Baja en carbohidratos</li>
+            <li>Excelente fuente de vitamina E y minerales</li>
+            <li>Ayuda a controlar el azúcar en sangre</li>
+          </ul>
+
+          <h2>Ingredientes:</h2>
+          <p>- Almendras molidas
+</p>
+
+          <h2>Modo de Consumo:</h2>
+          <p>- Repostería y panadería sin gluten
+- Agregar a smoothies y batidos
+- Usar en recetas de panes y pasteles
+- Como ingrediente en barras energéticas y snacks saludables
+</p>
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

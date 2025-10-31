@@ -1,0 +1,1166 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Natural-Vida Verde</title>
+  <link rel="icon" href="jardineria.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <style> 
+   /* Estilos generales y ajustes para móviles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end; /* Cambiamos a flex-end */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50; /* Asegura que esté por encima de todo */
+  padding: 0px 0 0; /* Ajusta el espacio arriba y abajo */
+
+}
+nav ul li a{  
+margin-top: 35px; /*letras inicio*/
+display:inline-block;
+} 
+
+@media (max-width:700px){
+  nav{
+    flex-direction: column;
+  }
+
+}
+.menu-toggle{
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*otro menú*/
+.categoria {
+      margin-top: 2rem;
+    }
+
+    nav ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 1 em;
+    }
+    nav li{
+      margin-right: 20px;
+    }
+    nav a{
+      text-decoration: none;
+      color: #fff; /*color del indice*/
+      transition: color 0.2s ease;
+}
+
+/*titulo productos*/
+header {
+    background-color: #1f8b43;
+    color: white; /* color de titulo de productos */
+    padding: 1em 0;
+    text-align: center;
+}
+
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.producto {
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.producto h2 {
+    margin-bottom: 10px;
+    color: #5cb85c;
+}
+
+.producto p {
+    margin-bottom: 10px;
+}
+
+.producto a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #0ba825;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #0a8d20;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-arrow.prev {
+    left: 10px;
+}
+
+.carousel-arrow.next {
+    right: 10px;
+}
+
+/* CARRUSEL */
+.carousel-item img {
+    height: 450px; /* Tamaño de las fotos */
+    object-fit: cover;
+}
+
+/* Estilos para el contenedor del carrusel */
+.carousel {
+    margin-top: 90px; /* Ajusta este valor según la altura de tu menú */
+}
+
+.texto {
+    position: absolute;
+    text-align: left;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.texto h6 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+    .texto {
+        padding: 20px; /* Reducir el padding */
+        top: 50%; /* Centrar verticalmente */
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrar el texto */
+        width: 80%; /* Ancho del contenedor del texto */
+    }
+
+    .texto h6 {
+        font-size: 24px; /* Tamaño de fuente más pequeño */
+        margin-bottom: 10px;
+    }
+
+   
+
+/* Tablets: 2 slides visibles */
+@media (max-width: 1023px) and (min-width: 600px) {
+  .slide {
+    width: 50%;
+  }
+  .caption {
+    font-size: 1rem;
+  }
+}
+
+/* Celulares: 1 slide visible */
+@media (max-width: 599px) {
+  .slide {
+    width: 100%;
+  }
+  .caption {
+    font-size: 0.9rem;
+  }
+}
+
+/* todo lo q está en catálogo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #558B2F;
+    padding: 20px 0;
+    background-color: #a4f3a1;
+}
+
+/* Estilos para el contenedor de las cartas */
+.catalogo {
+    width: 95%; /* Aumenta el ancho del contenedor */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.carta {
+    width: 30%; /* Ajusta el ancho para que quepan tres cartas */
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.carta img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carta .contenido {
+    padding: 15px; /* Aumenta el padding interno */
+}
+
+.carta .contenido h3 {
+    margin-top: 0;
+    font-size: 1.4em; /* Aumenta el tamaño del título */
+}
+
+.carta .contenido p {
+    font-size: 1.1em; /* Aumenta el tamaño del texto */
+}
+
+.carta .contenido a {
+    display: block;
+    padding: 12px 24px; /* Aumenta el padding del botón */
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 1.1em; /* Aumenta el tamaño del botón */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 960px) { /* Pantallas medianas */
+    .carta {
+        width: 48%; /* Dos cartas por fila */
+    }
+}
+
+@media (max-width: 600px) { /* Pantallas pequeñas */
+    .carta {
+        width: 100%; /* Una carta por fila */
+    }
+    .container {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 0 15px; /* Reduce el padding */
+    }
+}
+/*GALERIA DE PRODUCTOS */
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background-color: #e2d3d3;
+  font-family: helvetica Neue, Helvetica;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.swper {
+  width: 100%;
+  padding: 50px 0; /* Reduje el padding superior para móviles */
+}
+.swiper-slide {
+  width: 80%; /* Ancho más pequeño para que quepan en la pantalla */
+  max-width: 400px; /* Ancho máximo para pantallas más grandes */
+  height: auto; /* Altura automática para adaptarse al contenido */
+  background-color: #323232;
+  box-shadow: 0 0 20px rgb(9, 156, 3);
+  padding: 20px; /* Reduje el padding para móviles */
+  text-align: center;
+  margin: 0 auto; /* Centrar en la pantalla */
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Reduje el margen inferior */
+}
+
+.icons i {
+  font-size: 20px;
+  color: #11a104;
+}
+
+.icons img {
+  width: 80px; /* Reduje el tamaño de la imagen */
+}
+
+.producto-contenido {
+  display: flex;
+  flex-direction: column; /* Apilar elementos en móviles */
+  text-align: center; /* Centrar texto en móviles */
+}
+
+.producto-txt {
+  flex-basis: 100%; /* Ancho completo en móviles */
+  text-align: center; /* Centrar texto en móviles */
+  margin-bottom: 20px; /* Espacio entre texto e imagen */
+}
+
+.producto-txt span {
+  font-size: 20px; /* Reduje el tamaño de la fuente */
+  color:#11a104;
+  font-weight: bold;
+}
+.producto-txt h3 {
+  font-size: 18px; /* Reduje el tamaño de la fuente */
+  color: #fff; /*nobre titulo en galeria*/
+  text-transform: uppercase;
+}
+.producto-txt p {
+  font-size: 14px;
+  color: #C4C4C4; /*color de la infromacion en galeria*/
+}
+.producto-img {
+  flex-basis: 100%; /* Ancho completo en móviles */
+  text-align: center; /* Centrar la imagen */
+}
+.producto-img img {
+  width: 100px; /* Reduje el tamaño de la imagen */
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 10px 30px; /* Reduje el padding */
+  border: 1px solid #11a104; /*borde de mas información*/
+  border-radius: 50px;
+  color: #11a104;
+  text-decoration: none;
+  margin-top: 30px; /* Reduje el margen superior */
+  font-size: 14px; /* Reduje el tamaño de la fuente */
+}
+.swiper-container {
+  position: relative; /* Necesario para posicionar las flechas */
+}
+
+/* Media Query para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 90%; /* Ancho aún más pequeño para pantallas muy pequeñas */
+    padding: 15px; /* Aún menos padding */
+  }
+
+  .producto-txt span {
+    font-size: 18px; /* Reduje aún más el tamaño de la fuente */
+  }
+
+  .producto-txt h3 {
+    font-size: 16px; /* Reduje aún más el tamaño de la fuente */
+  }
+
+  .icons img {
+    width: 60px; /* Reduje aún más el tamaño de la imagen */
+  }
+}
+
+/*FOOTER*/
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+.fab {
+  font-size: 24px;
+}
+/*FORMULARIO */
+ /* Contenedor principal */
+    .contenedor-contacto { 
+      bottom: 20px; /* Distancia desde la parte inferior */
+      right: 20px; /* Distancia desde la derecha */
+      z-index: 1000; /* Asegura que esté encima de otros elementos */
+      text-align: right; /* Centra el contenido horizontalmente */
+    }
+/* Estilos para el icono */
+.icono-correo {
+  width: 70px; /* Tamaño del icono */
+  height: 70px; /* Tamaño del icono */
+  margin-bottom: 5px; /* Espacio entre el logo y el botón */
+  /*display: block;  Eliminamos esta línea */
+  padding: 0; /* Eliminamos el padding */
+}
+    /* Estilos para el botón */
+    .boton-contacto {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: right;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Estilos para el iframe */
+    #formularioContacto {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      width: 80%;
+      max-width: 600px;
+      height: 80%;
+      max-height: 600px;
+      overflow: auto;
+    }
+
+    /* Estilos para el iframe dentro del div */
+    #formularioContacto iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Estilos para el botón de cerrar */
+    .boton-cerrar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+     /* Para pantallas muy pequeñas (menos de 400px) */
+    @media (max-width: 400px) {
+      .contenedor-contacto {
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .icono-correo {
+        width: 40px;
+        height: 40px;
+      }
+
+      .boton-contacto {
+        padding: 10px 20px;
+        font-size: 12px;
+      }
+    }
+    /* Para pantallas pequeñas (menos de 600px) */
+    @media (max-width: 600px) {
+      .contenedor-contacto {
+        bottom: 10px;
+        right: 10px;
+      }
+      .icono-correo {
+        width: 45px;
+        height: 45px;
+      }
+      .boton-contacto {
+        padding: 11px 22px;
+        font-size: 13px;
+      }
+      #formularioContacto {
+        width: 95%;
+        max-width: 95%;
+        height: 90%;
+        max-height: 90%;
+        padding: 15px;
+      }
+    }
+
+    /* Para pantallas medianas (menos de 900px) */
+    @media (max-width: 900px) {
+      .contenedor-contacto {
+        bottom: 15px;
+        right: 15px;
+      }
+      .icono-correo {
+        width: 48px;
+        height: 48px;
+      }
+      .boton-contacto {
+        padding: 11px 22px;
+        font-size: 13px;
+      }
+    }
+/*IMAGEN DE FONDO CONTACTOS*/
+/* Estilos para la sección de contacto */
+  #Contacto {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Estilos para el fondo de la sección de contacto */
+  .seccion-contacto .fondo-contacto {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+  }
+
+  /* Estilos para la imagen de fondo */
+  #Contacto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("bosque.jpg"); 
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.8; /* Ajusta la opacidad para hacer la imagen más clara */
+    z-index: 0;
+  }
+
+  /* Estilos para el botón de WhatsApp */
+  .whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+  }
+  .container h4{
+    color: white;
+  }
+
+/*UBICACIÓN*/
+        /* Estilos para el mapa en la parte inferior */
+        .map-container {
+            width: 100%; /* El mapa ocupa todo el ancho de la página */
+            height: 400px; /* Ajusta la altura del mapa según sea necesario */
+            margin-top: 20px; /* Espacio entre el contenido principal y el mapa */
+        }
+
+        .map-responsive {
+            position: relative;
+            padding-bottom: 0;
+            height: 100%; /* El mapa ocupa toda la altura del contenedor */
+            overflow: hidden;
+        }
+
+        .map-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+</style>
+
+</head>
+<body>
+     <nav>  
+  <nav class="navbar navbar-light bg-success text-white mb-4">
+    <div class="container">
+      <div class="titulo-verde">
+    <h1>Vida Verde 🌿</h1>
+</div>
+      <nav>
+            <ul>
+                <li><a href="#carrusel">Inicio</a></li>
+                <li><a href="#Galería">Productos</a></li>
+                <li><a href="#Catálogo">Catálogo</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu">
+
+    </div>
+  </nav> 
+</nav>
+   <!----Carrusel------->
+  <section id="Carrusel">
+    <div id="carrusel" class="carousel slide container mb-5" data-bs-ride="carousel">
+        <div class="slider-box">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://verdevidaverde.com/wp-content/uploads/2020/08/vvv-home-header-plantas-1.jpg" 
+                    class="d-block w-100" alt="Alimentos que nutren">
+                    <div class="texto">
+                        <h6>
+                            <p>Alimentos que nutren, no que enferman</p>
+                        </h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://resources.diariolibre.com/images/2024/04/20/55013366058-4.jpg" 
+                    class="d-block w-100" alt="Come para vivir">
+                    <div class="texto">
+                        <h6>
+                            <p>Come para vivir, no vivas para comer</p>
+                        </h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://png.pngtree.com/thumb_back/fh260/background/20240601/pngtree-a-drop-of-hope-new-life-in-the-forest-image_15847061.jpg" 
+                    class="d-block w-100" alt="La salud comienza">
+                    <div class="texto">
+                        <h6>
+                            <p>La salud comienza en tu plato</p>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+  <!--Galeria de productos-->
+  <section id="Galería">  
+   <section id="productos"> 
+    <header> 
+        <h3>-------🥝Productos🥝-------</h3>
+         
+    </header>
+   </section>  
+ 
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>25 bs</span>
+              <h3>Yogurt kefír</h3>
+              <p>El yogur kefir
+                 es un producto lácteo 
+                 fermentado rico en 
+                 probióticos y nutrientes, 
+                 </p>
+               </div>
+               <div class="product-img">
+                <img src="icons8-yogur-64.png" alt="">
+               </div>
+              
+          </div>
+           <a href="yogurt.html" class="btn-1">Más información</a>
+           </div>
+
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>100 bs</span>
+              <h3>Aceite de coco</h3>
+              <p>Aceite vegetal extraído 
+                de la pulpa del coco, 
+                rico en ácidos grasos 
+                saludables.</p>
+              </div>
+              <div class="product-img">
+                <img src="icons8-coco-50.png" alt="">
+            </div>
+          </div>
+          <a href="aceite de coco.html" class="btn-1">Más información</a>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>10 bs</span>
+              <p>
+                Snacks prácticos y 
+                nutritivos que proporcionan
+                energía rápida y sostenida. 
+              </p>
+              <h3>Barras energy</h3>
+              </div>
+              <div class="product-img">
+                <img src="icons8-chocolatina-50.png" alt="">
+              </div>
+               </div>
+          <a href="barras.html" class="btn-1">Más información</a>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>50 bs</span>
+              <h3>Fruta seca</h3>
+              <p>Frutas frescas 
+                deshidratadas que
+                conservan nutrientes 
+                y sabor.</p>
+              </div>
+              <div class="product-img">
+                <img src="icons8-frambuesa-50.png" alt="">
+              </div>
+             </div>
+          <a href="fruta.html" class="btn-1">Más información</a>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>70 bs</span>
+              <h3>harina de almendra</h3>
+              <p>Harina fina y nutritiva 
+                obtenida de almendras molidas, 
+                sin gluten.</p>
+              </div>
+              <div class="product-img">
+                <img src="icons8-almendra-50.png" alt="">
+              </div>
+               </div>
+          <a href="harina.html" class="btn-1">Más información</a>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>80 bs</span>
+              <h3>aceite de girasol</h3>
+              <p>Aceite vegetal extraído
+                 de las semillas de girasol,
+                 rico en grasas saludables.</p>
+              </div>
+            <div class="productos-img">
+              <img src="icons8-girasol-50.png" alt="">
+               </div>
+          </div>
+          <a href="girasol.html" class="btn-1">Más infromación</a>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>50 bs</span>
+              <h3>Maca</h3>
+              <p>Planta peruana rica en nutrientes y propiedades medicinales.</p>
+              </div>
+              <div class="product-img">
+                <img src="icons8-saco-de-harina-50.png" alt="">
+              </div>
+              </div>
+          <a href="maca.html" class="btn-1">Más información</a>
+        </div>
+
+         <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>55 bs</span>
+              <h3>Harina de linaza</h3>
+              <p>Harina nutritiva obtenida 
+                de semillas de lino molidas,
+                rica en omega-3 y fibra.</p>
+              </div>
+              <div class="product-img">
+                <img src="icons8-semillas-de-lino-50.png" alt="">
+              </div>
+              </div>
+          <a href="linaza.html" class="btn-1">Más información</a>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>40 bs</span>
+              <h3>Avena</h3>
+              <p>Cereal integral rico 
+                en fibra y nutrientes.</p>
+              </div>
+              <div class="product-img">
+                <img src="icons8-crema-de-avena-50.png" alt="">
+              </div>
+              </div>
+          <a href="avena.html" class="btn-1">Más información</a>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>30 bs</span>
+              <h3>Miel orgánica</h3>
+              <p> Miel pura y natural
+                 producida sin pesticidas 
+                 ni químicos.</p>
+              </div>
+              <div class="product-img">
+                <img src="icons8-miel-50 (1).png" alt="">
+              </div>
+              </div>
+          <a href="miel.html" class="btn-1">Más información</a>
+        </div>
+        
+        <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>25 bs</span>
+              <h3>Mantequilla de maní</h3>
+              <p>Crema espesa y nutritiva 
+                hecha de maní molido.</p>
+              </div>
+              <div class="product-img">
+                <img src="icons8-cacahuetes-50.png" alt="">
+              </div>
+              </div>
+          <a href="mani.html" class="btn-1">Más información</a>
+        </div>
+
+         <div class="swiper-slide">
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <img src="" alt="">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="producto-contenido">
+            <div class="producto-txt">
+              <span>25 bs</span>
+              <h3>Salmón enlatado</h3>
+              <p>Salmón preservado
+                 en aceite o agua,
+                rico en nutrientes.</p>
+              </div>
+              <div class="product-img">
+                <img src="icons8-salmón-50.png" alt="">
+              </div>
+              </div>
+          <a href="salmon.html" class="btn-1">Más información</a>
+        </div>
+
+      </div>
+    </div>
+   
+    </section>
+
+<!---catalogo--->
+<section id="Catálogo"> 
+  <div class="container"> 
+    <section id="catalogo"> 
+      <header> 
+    <h3>----------🥝Catálogo🥝----------</h3>
+  </header>
+    <div id="product-list">
+        <!-- Aquí se agregarán los productos -->
+    </div>
+
+    <div class="catalogo">
+        <div class="carta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhWhPkOcihNAwUeRjtTv_Xwm3rOEsnu7RsAg&s" alt="#">
+            <div class="contenido">
+                <h3>PRODUCTOS / COMBOS</h3>
+                <p>Busca los productos que dees en nuestro catálogo</p>
+                    <a href="catalogo1.html">CATALOGO</a>
+                 
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3flXekXukEtlqBZPtYuTYOaY1pdi9FW5GGw&s" alt="#">
+            <div class="contenido">
+                <h3>PRODUCTOS EN DESCUENTO</h3>
+                <p>Busca los productos que dees en nuestro catálogo</p>
+                <a href="catálogo2.html">CATALOGO</a>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQnMvS_vgHqMq7PHgcA-CBz6h8FmzaLOjbg&s" alt="#">
+            <div class="contenido">
+                <h3>PRODUCTOS / OTROS</h3>
+                <p>Busca los productos que dees en nuestro catálogo</p>
+                <a href="catálogo3.html">CATALOGO</a>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLO55svoOKb2PPzXRwrGy-tlP_TOyXyvFYyQ&s" alt="#">
+            <div class="contenido">
+                <h3>PRODUCTOS / ACEITES</h3>
+                <p>Busca los productos que dees en nuestro catálogo</p>
+                <a href="catalogo4.html ">CATALOGO</a>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiyY5s2zZp2lYdGG-IXK-W2Gfcn0m63XXShw&s" alt="#">
+            <div class="contenido">
+                <h3>OFERTA FRUTOS SECOS</h3>
+                <p>Busca los productos que dees en nuestro catálogo</p>
+                <a href="catalogo5.html">CATALOGO</a>
+            </div>
+        </div>
+
+         <div class="carta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHV4-JoY2dVvl_ZGmH2HuSGTkX3wLGLlPaw&s" alt="#">
+               <div class="contenido">
+                <h3>COSMÉTICA NATURAL</h3>
+                <p>Busca los productos que dees en nuestro catálogo</p>
+                <a href="catalogo6.html">CATALOGO</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</header>
+<!--watsapp-->
+<section id="Contacto">
+  <div class="seccion-contacto">
+    <div class="fondo-contacto">
+      <header>
+        <h3>-------🥝Contacto🥝-------</h3>
+      </header>
+      <div class="container mt-5 mb-5">
+        <h4>🌷Contáctanos para comprar en físico </h4>
+        <button class="whatsapp-button" onclick="openWhatsApp()">
+          Contáctanos por WhatsApp
+        </button>
+      </div>
+      <!--FORMULARIO DE CONTACTOS-->
+      <div class="contenedor-contacto">
+        <img src="icons8-correo-electrónico-64.png" alt="Correo Electrónico" class="icono-correo">
+        <button class="boton-contacto" onclick="mostrarFormulario()">Contáctanos</button>
+      </div>
+      <div id="formularioContacto">
+        <button class="boton-cerrar" onclick="ocultarFormulario()">Cerrar</button>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScs8RsFnAFZkxrQ2pzPhTo_ZGDgIAFmv0XO3_p4BJvyS_T9bw/viewform?usp=header" 
+        frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  function mostrarFormulario() {
+    var formulario = document.getElementById("formularioContacto");
+    formulario.style.display = "block";
+  }
+  function ocultarFormulario() {
+    var formulario = document.getElementById("formularioContacto");
+    formulario.style.display = "none";
+  }
+</script>
+     <!--hasta aquí-->
+    <!--para galeria de productos-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"> </script>
+    <script>  
+    var swiper=new Swiper(".mySwiper",{
+      effect:"coverflow",
+      grabCursor:true,
+      centerdSlides:true,
+      slidesPerView: "auto",
+      loop:true,
+      coverflowEffect:{
+        depth:500,
+        modifer:1,
+        slidesShadows:true,
+
+      }
+    }
+    )
+    </script>
+<!--hasta aquí-->
+<!---para watsap-->
+    <script> 
+        function openWhatsApp() {
+            // Número de teléfono (con el código de país)
+            var phoneNumber = "73821147";
+
+            // Mensaje predefinido
+            var message = "Hola, quisiera comprar este producto";
+
+            // Crear el enlace de WhatsApp
+            var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+            // Abrir WhatsApp en una nueva ventana
+            window.open(whatsappURL, '_blank');
+        }
+
+        
+    </script>
+  
+<!--ubicacion-->
+    <div class="map-container">
+        <div class="map-responsive">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7640.62385420701!2d-67.11689514289552!3d-17.964446200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915df254cd41ca99%3A0x5c948c4999391424!2sSoria%20Galvarro%2C%20Oruro!5e0!3m2!1ses!2sbo!4v1718217989928!5m2!1ses!2sbo"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+
+<footer>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/vid_ver.de" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/@Vida Verde" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://tiktok.com/@vid_ver.de" target="_blank"><i class="fab fa-tiktok"></i></a>
+  </div>
+  <p>&copy; |2025 Vida Verde - Todos los derechos reservados|
+             
+  </p>
+  <p> |Jhanneth Loza Alonzo : Esther E. Cuba Puña|</p>
+</footer>
+
+  </div>
+
+  </body>
+</html
